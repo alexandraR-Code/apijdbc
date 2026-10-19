@@ -1,6 +1,10 @@
 package com.krakdev.jdbc;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,6 +27,22 @@ public class Conexion {
 			log.error("Error en la conexion" + e.getMessage());
 			throw new RuntimeException("No se puede conectar", e);
 		}
+	}
+
+	public static void cerrarConexiones(Connection con, PreparedStatement ps, ResultSet rs) {
+		try {
+
+			if (con != null)
+				con.close();
+			if (ps != null)
+				ps.close();
+			if (rs != null)
+				rs.close();
+			log.info("Conexiones cerradas");
+		} catch (SQLException e) {
+			log.error("Ocurrio un error al cerrar conexioes: " + e.getMessage());
+		}
+
 	}
 
 }
