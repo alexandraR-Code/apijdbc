@@ -68,7 +68,7 @@ public class VideojuegoJdbcController {
 
 		HttpStatusCode code = HttpStatus.OK;
 
-		if (actualizado != null) {
+		if (actualizado == null) {
 			code = HttpStatus.NOT_FOUND;
 		}
 		return new ResponseEntity<Videojuego>(actualizado, code);
@@ -80,7 +80,7 @@ public class VideojuegoJdbcController {
 
 		HttpStatusCode code = HttpStatus.NO_CONTENT;
 
-		if (eliminado) {
+		if (!eliminado) {
 			code = HttpStatus.NOT_FOUND;
 		}
 		return new ResponseEntity<String>("", code);
