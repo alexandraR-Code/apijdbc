@@ -189,7 +189,7 @@ public class VideojuegoJdbc {
 		PreparedStatement ps = null;
 
 		String sql = """
-				DELETE videojuegos
+				DELETE FROM videojuegos
 				WHERE codigo = ?;
 
 				""";
