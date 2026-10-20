@@ -152,7 +152,7 @@ public class VideojuegoJdbc {
 				plataforma = ?,
 				precio = ?,
 				disponible = ?,
-				genero = '' WHERE codigo = ?;
+				genero = ? WHERE codigo = ?;
 				""";
 
 		try {
