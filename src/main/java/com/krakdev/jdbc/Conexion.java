@@ -15,7 +15,7 @@ public class Conexion {
 
 	private static final String URL = "jdbc:postgresql://localhost:5432/apijdbc";
 	private static final String USER = "postgres";
-	private static final String PASSWORD = "Maribel1995.";
+	private static final String PASSWORD = "0123456";
 
 	public static Connection getConnection() {
 		try {
