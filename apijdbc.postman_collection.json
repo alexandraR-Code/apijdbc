@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "2cd05279-2c07-40ea-8214-f59dbb22a7f7",
+    "name": "apijdbc",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56718877",
+    "_collection_link": "https://go.postman.co/collection/56718877-2cd05279-2c07-40ea-8214-f59dbb22a7f7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "crear",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"4525\",\r\n    \"nombre\": \"EFooTball\",\r\n    \"plataforma\": \"XBOX\",\r\n    \"precio\": 49.99,\r\n    \"disponible\": true,\r\n    \"genero\": \"Sports\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/jdbc/videojuegos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "jdbc",
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener juego",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/jdbc/videojuegos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "jdbc",
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar por codigo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/jdbc/videojuegos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "jdbc",
+            "videojuegos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"VG001\",\r\n    \"nombre\": \"EFooTball\",\r\n    \"plataforma\": \"PlayStation\",\r\n    \"precio\": 15.99,\r\n    \"disponible\": true,\r\n    \"genero\": \"Sports\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/jdbc/videojuegos/VG001",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "jdbc",
+            "videojuegos",
+            "VG001"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"codigo\": \"V6902\",\r\n    \"nombre\": \"EFooTball\",\r\n    \"plataforma\": \"XBOX\",\r\n    \"precio\": 49.99,\r\n    \"disponible\": true,\r\n    \"genero\": \"Sports\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/jdbc/videojuegos/V6902",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "jdbc",
+            "videojuegos",
+            "V6902"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
